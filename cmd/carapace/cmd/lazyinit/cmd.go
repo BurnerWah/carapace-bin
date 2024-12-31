@@ -33,8 +33,8 @@ end
 	argmatchers := make([]string, 0, len(completers))
 	for _, completer := range completers {
 		argmatchers = append(argmatchers,
-			fmt.Sprintf(`clink.argmatcher("%v"):addarg({carapace_completion("%v")}):loop(1)`, completer, completer),
-			fmt.Sprintf(`clink.argmatcher("%v.exe"):addarg({carapace_completion("%v")}):loop(1)`, completer, completer),
+			fmt.Sprintf(`clink.argmatcher("%v"):addarg({nowordbreakchars="'&backprime;+;,", carapace_completion("%v")}):loop(1)`, completer, completer),
+			fmt.Sprintf(`clink.argmatcher("%v.exe"):addarg({nowordbreakchars="'&backprime;+;,", carapace_completion("%v")}):loop(1)`, completer, completer),
 		)
 	}
 	return fmt.Sprintf(snippet, strings.Join(argmatchers, "\n"))
