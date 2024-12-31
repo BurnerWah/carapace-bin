@@ -20,7 +20,8 @@ func CmdClink(completers []string) string {
       end 
       match_builder:addmatch({ 
         match = matches[1], 
-        description = matches[2] 
+        description = matches[2],
+        type = "word"
       }) 
     end
     return true
