@@ -10,7 +10,7 @@ func CmdClink(completers []string) string {
 	snippet := `local function carapace_completion(command)
   return function(word, word_index, line_state, match_builder)
     local compline = string.sub(line_state:getline(), 1, line_state:getcursor())
-    local prog = string.format("env CARAPACE_COMPLINE=%%s carapace %%s  cmd-clink \"\" \"\"", string.format("%%q", compline), command)
+    local prog = string.format("env CARAPACE_COMPLINE=%%s carapace %%s  cmd-clink \"\"", string.format("%%q", compline), command)
 
     local output = io.popen(prog):read("*a")
     for line in string.gmatch(output, '[^\r\n]+') do
