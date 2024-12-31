@@ -19,9 +19,12 @@ func CmdClink(completers []string) string {
         table.insert(matches, m) 
       end 
       match_builder:addmatch({ 
-        match = matches[1], 
-        description = matches[2],
-        type = "word"
+        match = matches[1],
+        display = matches[2],
+        description = matches[3],
+        type = "word",
+        appendchar = matches[4],
+        suppressappend = false
       }) 
     end
     return true
