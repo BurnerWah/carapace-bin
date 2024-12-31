@@ -14,7 +14,14 @@ func CmdClink(completers []string) string {
 
     local output = io.popen(prog):read("*a")
     for line in string.gmatch(output, '[^\r\n]+') do
-      match_builder:addmatch(string.gsub(line, '\t.*', ""))
+      local matches = {} 
+      for m in string.gmatch(line, '[^\t]+') do 
+        table.insert(matches, m) 
+      end 
+      match_builder:addmatch({ 
+        match = matches[1], 
+        description = matches[2] 
+      }) 
     end
     return true
   end
