@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"github.com/carapace-sh/carapace"
+	"github.com/carapace-sh/carapace-bin/completers/xsv_completer/cmd/common"
 	"github.com/spf13/cobra"
 )
 
@@ -14,7 +15,8 @@ var countCmd = &cobra.Command{
 func init() {
 	carapace.Gen(countCmd).Standalone()
 
-	countCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
-	countCmd.Flags().BoolP("no-headers", "n", false, "When set, the first row will not be included in")
+	common.AddCommonFlags(countCmd)
 	rootCmd.AddCommand(countCmd)
+
+	carapace.Gen(countCmd).PositionalAnyCompletion(carapace.ActionFiles(".csv"))
 }
