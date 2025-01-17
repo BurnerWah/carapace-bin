@@ -7,6 +7,9 @@ import (
 
 func AddCommonFlags(cmd *cobra.Command) {
 	cmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data")
+}
+
+func AddNoHeadersFlag(cmd *cobra.Command) {
 	cmd.Flags().BoolP("no-headers", "n", false, "Don't interpert the first row as a header")
 }
 

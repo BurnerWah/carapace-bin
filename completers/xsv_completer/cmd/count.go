@@ -16,6 +16,7 @@ func init() {
 	carapace.Gen(countCmd).Standalone()
 
 	common.AddCommonFlags(countCmd)
+	common.AddNoHeadersFlag(countCmd)
 	rootCmd.AddCommand(countCmd)
 
 	carapace.Gen(countCmd).PositionalAnyCompletion(carapace.ActionFiles(".csv"))
