@@ -7,7 +7,7 @@ import (
 
 var flattenCmd = &cobra.Command{
 	Use:   "flatten",
-	Short: "",
+	Short: "Show one field per line",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

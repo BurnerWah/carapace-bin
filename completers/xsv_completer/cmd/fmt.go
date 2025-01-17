@@ -7,7 +7,7 @@ import (
 
 var fmtCmd = &cobra.Command{
 	Use:   "fmt",
-	Short: "",
+	Short: "Format CSV output (change field delimiter)",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

@@ -7,7 +7,7 @@ import (
 
 var frequencyCmd = &cobra.Command{
 	Use:   "frequency",
-	Short: "",
+	Short: "Show frequency tables",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

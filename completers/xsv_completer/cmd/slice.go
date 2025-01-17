@@ -7,7 +7,7 @@ import (
 
 var sliceCmd = &cobra.Command{
 	Use:   "slice",
-	Short: "",
+	Short: "Slice records from CSV",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

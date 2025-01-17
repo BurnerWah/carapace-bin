@@ -7,7 +7,7 @@ import (
 
 var fixlengthsCmd = &cobra.Command{
 	Use:   "fixlengths",
-	Short: "",
+	Short: "Makes all records have same length",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

@@ -7,7 +7,7 @@ import (
 
 var catCmd = &cobra.Command{
 	Use:   "cat",
-	Short: "",
+	Short: "Concatenate by row or column",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

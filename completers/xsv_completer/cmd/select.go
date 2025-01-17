@@ -7,7 +7,7 @@ import (
 
 var selectCmd = &cobra.Command{
 	Use:   "select",
-	Short: "",
+	Short: "Select columns from CSV",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

@@ -7,7 +7,7 @@ import (
 
 var joinCmd = &cobra.Command{
 	Use:   "join",
-	Short: "",
+	Short: "Join CSV files",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

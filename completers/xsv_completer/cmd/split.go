@@ -7,7 +7,7 @@ import (
 
 var splitCmd = &cobra.Command{
 	Use:   "split",
-	Short: "",
+	Short: "Split CSV data into many files",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

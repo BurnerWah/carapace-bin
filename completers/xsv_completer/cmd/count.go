@@ -7,7 +7,7 @@ import (
 
 var countCmd = &cobra.Command{
 	Use:   "count",
-	Short: "",
+	Short: "Count records",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

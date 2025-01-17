@@ -7,7 +7,8 @@ import (
 
 var rootCmd = &cobra.Command{
 	Use:   "xsv",
-	Short: "",
+	Short: "Fast CSV toolkit written in Rust",
+	Long:  "https://github.com/BurntSushi/xsv",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

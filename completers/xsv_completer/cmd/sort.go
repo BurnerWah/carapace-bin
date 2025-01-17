@@ -7,7 +7,7 @@ import (
 
 var sortCmd = &cobra.Command{
 	Use:   "sort",
-	Short: "",
+	Short: "Sort CSV data",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

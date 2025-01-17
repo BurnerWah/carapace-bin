@@ -7,7 +7,7 @@ import (
 
 var tableCmd = &cobra.Command{
 	Use:   "table",
-	Short: "",
+	Short: "Align CSV data into columns",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

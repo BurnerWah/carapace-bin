@@ -7,7 +7,7 @@ import (
 
 var sampleCmd = &cobra.Command{
 	Use:   "sample",
-	Short: "",
+	Short: "Randomly sample CSV data",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

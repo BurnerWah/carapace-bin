@@ -7,7 +7,7 @@ import (
 
 var indexCmd = &cobra.Command{
 	Use:   "index",
-	Short: "",
+	Short: "Create CSV index for faster access",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

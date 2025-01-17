@@ -7,7 +7,7 @@ import (
 
 var statsCmd = &cobra.Command{
 	Use:   "stats",
-	Short: "",
+	Short: "Compute basic statistics",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

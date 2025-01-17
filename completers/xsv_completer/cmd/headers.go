@@ -7,7 +7,7 @@ import (
 
 var headersCmd = &cobra.Command{
 	Use:   "headers",
-	Short: "",
+	Short: "Show header names",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

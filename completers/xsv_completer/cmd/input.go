@@ -7,7 +7,7 @@ import (
 
 var inputCmd = &cobra.Command{
 	Use:   "input",
-	Short: "",
+	Short: "Read CSV data with special quoting rules",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 

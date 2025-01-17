@@ -7,7 +7,7 @@ import (
 
 var searchCmd = &cobra.Command{
 	Use:   "search",
-	Short: "",
+	Short: "Search CSV data with regexes",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 
