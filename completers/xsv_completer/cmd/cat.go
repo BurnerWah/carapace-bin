@@ -16,7 +16,7 @@ func init() {
 	carapace.Gen(catCmd).Standalone()
 
 	catCmd.Flags().BoolP("pad", "p", false, "Pad rows if data isn't long enough, or show all records for columns")
-	common.AddCommonFlags(catCmd)
+	common.AddDelimiterFlag(catCmd)
 	common.AddNoHeadersFlag(catCmd)
 	common.AddOutputFlag(catCmd)
 	rootCmd.AddCommand(catCmd)

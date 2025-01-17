@@ -5,7 +5,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func AddCommonFlags(cmd *cobra.Command) {
+func AddDelimiterFlag(cmd *cobra.Command) {
 	cmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data")
 }
 

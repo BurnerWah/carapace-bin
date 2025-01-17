@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"github.com/carapace-sh/carapace"
+	"github.com/carapace-sh/carapace-bin/completers/xsv_completer/cmd/common"
 	"github.com/spf13/cobra"
 )
 
@@ -14,8 +15,8 @@ var fixlengthsCmd = &cobra.Command{
 func init() {
 	carapace.Gen(fixlengthsCmd).Standalone()
 
-	fixlengthsCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
 	fixlengthsCmd.Flags().StringP("length", "l", "", "Forcefully set the length of each record. If a")
-	fixlengthsCmd.Flags().StringP("output", "o", "", "Write output to <file> instead of stdout.")
+	common.AddDelimiterFlag(fixlengthsCmd)
+	common.AddOutputFlag(fixlengthsCmd)
 	rootCmd.AddCommand(fixlengthsCmd)
 }

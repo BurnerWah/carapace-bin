@@ -15,7 +15,7 @@ var countCmd = &cobra.Command{
 func init() {
 	carapace.Gen(countCmd).Standalone()
 
-	common.AddCommonFlags(countCmd)
+	common.AddDelimiterFlag(countCmd)
 	common.AddNoHeadersFlag(countCmd)
 	rootCmd.AddCommand(countCmd)
 

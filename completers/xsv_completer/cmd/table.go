@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"github.com/carapace-sh/carapace"
+	"github.com/carapace-sh/carapace-bin/completers/xsv_completer/cmd/common"
 	"github.com/spf13/cobra"
 )
 
@@ -15,9 +16,9 @@ func init() {
 	carapace.Gen(tableCmd).Standalone()
 
 	tableCmd.Flags().StringP("condense", "c", "", "Limits the length of each field to the value")
-	tableCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
-	tableCmd.Flags().StringP("output", "o", "", "Write output to <file> instead of stdout.")
 	tableCmd.Flags().StringP("pad", "p", "", "The minimum number of spaces between each column.")
 	tableCmd.Flags().StringP("width", "w", "", "The minimum width of each column.")
+	common.AddDelimiterFlag(tableCmd)
+	common.AddOutputFlag(tableCmd)
 	rootCmd.AddCommand(tableCmd)
 }
