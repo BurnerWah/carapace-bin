@@ -18,7 +18,7 @@ func Execute() error {
 func init() {
 	carapace.Gen(rootCmd).Standalone()
 
-	rootCmd.Flags().BoolP("help", "h", false, "Display this message")
-	rootCmd.Flags().Bool("list", false, "List all commands available.")
+	rootCmd.PersistentFlags().BoolP("help", "h", false, "Show command help")
+	rootCmd.Flags().Bool("list", false, "List all commands available")
 	rootCmd.Flags().Bool("version", false, "Print version info and exit")
 }
