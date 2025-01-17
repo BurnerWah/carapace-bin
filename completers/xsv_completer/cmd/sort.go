@@ -15,7 +15,6 @@ func init() {
 	carapace.Gen(sortCmd).Standalone()
 
 	sortCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
-	sortCmd.Flags().BoolP("help", "h", false, "Display this message")
 	sortCmd.Flags().BoolP("no-headers", "n", false, "When set, the first row will not be interpreted")
 	sortCmd.Flags().BoolP("numeric", "N", false, "Compare according to string numerical value")
 	sortCmd.Flags().StringP("output", "o", "", "Write output to <file> instead of stdout.")

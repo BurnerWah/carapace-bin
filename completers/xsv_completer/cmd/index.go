@@ -15,7 +15,6 @@ func init() {
 	carapace.Gen(indexCmd).Standalone()
 
 	indexCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
-	indexCmd.Flags().BoolP("help", "h", false, "Display this message")
 	indexCmd.Flags().StringP("output", "o", "", "Write index to <file> instead of <input>.idx.")
 	rootCmd.AddCommand(indexCmd)
 }

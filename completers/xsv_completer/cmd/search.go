@@ -15,7 +15,6 @@ func init() {
 	carapace.Gen(searchCmd).Standalone()
 
 	searchCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
-	searchCmd.Flags().BoolP("help", "h", false, "Display this message")
 	searchCmd.Flags().BoolP("ignore-case", "i", false, "Case insensitive search. This is equivalent to")
 	searchCmd.Flags().BoolP("invert-match", "v", false, "Select only rows that did not match")
 	searchCmd.Flags().BoolP("no-headers", "n", false, "When set, the first row will not be interpreted")

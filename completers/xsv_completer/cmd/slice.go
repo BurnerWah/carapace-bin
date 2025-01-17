@@ -16,7 +16,6 @@ func init() {
 
 	sliceCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
 	sliceCmd.Flags().StringP("end", "e", "", "The index of the record to slice to.")
-	sliceCmd.Flags().BoolP("help", "h", false, "Display this message")
 	sliceCmd.Flags().StringP("index", "i", "", "Slice a single record (shortcut for -s N -l 1).")
 	sliceCmd.Flags().StringP("len", "l", "", "The length of the slice (can be used instead")
 	sliceCmd.Flags().BoolP("no-headers", "n", false, "When set, the first row will not be interpreted")

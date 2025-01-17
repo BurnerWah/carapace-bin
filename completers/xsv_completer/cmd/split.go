@@ -16,7 +16,6 @@ func init() {
 
 	splitCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
 	splitCmd.Flags().String("filename", "", "A filename template to use when constructing")
-	splitCmd.Flags().BoolP("help", "h", false, "Display this message")
 	splitCmd.Flags().StringP("jobs", "j", "", "The number of spliting jobs to run in parallel.")
 	splitCmd.Flags().BoolP("no-headers", "n", false, "When set, the first row will NOT be interpreted")
 	splitCmd.Flags().StringP("size", "s", "", "The number of records to write into each chunk.")

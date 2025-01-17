@@ -17,7 +17,6 @@ func init() {
 	joinCmd.Flags().Bool("cross", false, "USE WITH CAUTION.")
 	joinCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
 	joinCmd.Flags().Bool("full", false, "Do a 'full outer' join. This returns all rows in")
-	joinCmd.Flags().BoolP("help", "h", false, "Display this message")
 	joinCmd.Flags().Bool("left", false, "Do a 'left outer' join. This returns all rows in")
 	joinCmd.Flags().Bool("no-case", false, "When set, joins are done case insensitively.")
 	joinCmd.Flags().BoolP("no-headers", "n", false, "When set, the first row will not be interpreted")

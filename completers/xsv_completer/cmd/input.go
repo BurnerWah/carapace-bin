@@ -16,7 +16,6 @@ func init() {
 
 	inputCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
 	inputCmd.Flags().String("escape", "", "The escape character to use. When not specified,")
-	inputCmd.Flags().BoolP("help", "h", false, "Display this message")
 	inputCmd.Flags().Bool("no-quoting", false, "Disable quoting completely.")
 	inputCmd.Flags().StringP("output", "o", "", "Write output to <file> instead of stdout.")
 	inputCmd.Flags().String("quote", "", "The quote character to use. [default: \"]")

@@ -14,7 +14,6 @@ var helpCmd = &cobra.Command{
 func init() {
 	carapace.Gen(helpCmd).Standalone()
 
-	helpCmd.Flags().BoolP("help", "h", false, "Display this message")
 	helpCmd.Flags().Bool("list", false, "List all commands available.")
 	helpCmd.Flags().Bool("version", false, "Print version info and exit")
 	rootCmd.AddCommand(helpCmd)

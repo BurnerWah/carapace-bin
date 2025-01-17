@@ -16,7 +16,6 @@ func init() {
 
 	frequencyCmd.Flags().BoolP("asc", "a", false, "Sort the frequency tables in ascending order by")
 	frequencyCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
-	frequencyCmd.Flags().BoolP("help", "h", false, "Display this message")
 	frequencyCmd.Flags().StringP("jobs", "j", "", "The number of jobs to run in parallel.")
 	frequencyCmd.Flags().StringP("limit", "l", "", "Limit the frequency table to the N most common")
 	frequencyCmd.Flags().BoolP("no-headers", "n", false, "When set, the first row will NOT be included")

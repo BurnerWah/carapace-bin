@@ -15,7 +15,6 @@ func init() {
 	carapace.Gen(countCmd).Standalone()
 
 	countCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
-	countCmd.Flags().BoolP("help", "h", false, "Display this message")
 	countCmd.Flags().BoolP("no-headers", "n", false, "When set, the first row will not be included in")
 	rootCmd.AddCommand(countCmd)
 }

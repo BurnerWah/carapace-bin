@@ -15,7 +15,6 @@ func init() {
 	carapace.Gen(selectCmd).Standalone()
 
 	selectCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
-	selectCmd.Flags().BoolP("help", "h", false, "Display this message")
 	selectCmd.Flags().BoolP("no-headers", "n", false, "When set, the first row will not be interpreted")
 	selectCmd.Flags().StringP("output", "o", "", "Write output to <file> instead of stdout.")
 	rootCmd.AddCommand(selectCmd)

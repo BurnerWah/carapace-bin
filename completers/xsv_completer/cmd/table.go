@@ -16,7 +16,6 @@ func init() {
 
 	tableCmd.Flags().StringP("condense", "c", "", "Limits the length of each field to the value")
 	tableCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
-	tableCmd.Flags().BoolP("help", "h", false, "Display this message")
 	tableCmd.Flags().StringP("output", "o", "", "Write output to <file> instead of stdout.")
 	tableCmd.Flags().StringP("pad", "p", "", "The minimum number of spaces between each column.")
 	tableCmd.Flags().StringP("width", "w", "", "The minimum width of each column.")

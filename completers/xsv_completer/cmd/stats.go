@@ -17,7 +17,6 @@ func init() {
 	statsCmd.Flags().Bool("cardinality", false, "Show the cardinality.")
 	statsCmd.Flags().StringP("delimiter", "d", "", "The field delimiter for reading CSV data.")
 	statsCmd.Flags().Bool("everything", false, "Show all statistics available.")
-	statsCmd.Flags().BoolP("help", "h", false, "Display this message")
 	statsCmd.Flags().StringP("jobs", "j", "", "The number of jobs to run in parallel.")
 	statsCmd.Flags().Bool("median", false, "Show the median.")
 	statsCmd.Flags().Bool("mode", false, "Show the mode.")
