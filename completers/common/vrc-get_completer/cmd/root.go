@@ -7,7 +7,8 @@ import (
 
 var rootCmd = &cobra.Command{
 	Use:   "vrc-get",
-	Short: "Open Source command line client of VRChat Package Manager.",
+	Short: "Open Source command line client of VRChat Package Manager",
+	Long:  "https://github.com/vrc-get/vrc-get",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 
