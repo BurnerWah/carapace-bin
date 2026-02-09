@@ -16,6 +16,7 @@ func init() {
 	carapace.Gen(upCmd).Standalone()
 
 	common.AddSettingsFlags(upCmd)
+	common.AddAcceptRisksFlag(upCmd)
 	common.AddUpFlags(upCmd)
 
 	upCmd.Flags().Bool("json", false, "output in JSON format")
