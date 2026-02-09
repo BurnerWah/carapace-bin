@@ -19,6 +19,10 @@ func init() {
 	carapace.Gen(rootCmd).Standalone()
 
 	rootCmd.Flags().String("socket", "", "path to tailscaled socket")
+	rootCmd.Flags().BoolP("version", "V", false, "Print Tailscale version")
+	rootCmd.PersistentFlags().BoolP("help", "h", false, "Print help")
+
+	rootCmd.Flag("version").Hidden = true
 
 	carapace.Gen(rootCmd).FlagCompletion(carapace.ActionMap{
 		"socket": carapace.ActionFiles(),
