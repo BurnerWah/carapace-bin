@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"github.com/carapace-sh/carapace"
+	"github.com/carapace-sh/carapace-bin/completers/common/tailscale_completer/cmd/action"
 	"github.com/spf13/cobra"
 )
 
@@ -21,4 +22,8 @@ func init() {
 	ipCmd.MarkFlagsMutuallyExclusive("1", "4", "6")
 
 	rootCmd.AddCommand(ipCmd)
+
+	carapace.Gen(ipCmd).PositionalCompletion(
+		action.ActionPeers(),
+	)
 }
