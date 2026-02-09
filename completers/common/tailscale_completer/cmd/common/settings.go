@@ -1,6 +1,10 @@
 package common
 
-import "github.com/spf13/cobra"
+import (
+	"github.com/carapace-sh/carapace"
+	"github.com/carapace-sh/carapace-bin/pkg/actions/os"
+	"github.com/spf13/cobra"
+)
 
 func AddSettingsFlags(cmd *cobra.Command) {
 	cmd.Flags().Bool("accept-dns", true, "accept DNS configuration from the admin panel")
@@ -14,4 +18,8 @@ func AddSettingsFlags(cmd *cobra.Command) {
 	cmd.Flags().String("operator", "", "Unix username to allow to operate on tailscaled without sudo") // Add Completions
 	cmd.Flags().Bool("shields-up", false, "don't allow incoming connections")
 	cmd.Flags().Bool("ssh", false, "run an SSH server, permitting access per tailnet admin's declared policy")
+
+	carapace.Gen(cmd).FlagCompletion(carapace.ActionMap{
+		"operator": os.ActionUsers(),
+	})
 }
