@@ -16,6 +16,7 @@ func init() {
 	carapace.Gen(setCmd).Standalone()
 
 	common.AddSettingsFlags(setCmd)
+	common.AddAcceptRisksFlag(setCmd)
 
 	setCmd.Flags().Bool("auto-update", false, "automatically update to the latest available version")
 	setCmd.Flags().String("nickname", "", "nickname for the current account")

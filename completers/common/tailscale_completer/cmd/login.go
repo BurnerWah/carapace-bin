@@ -16,6 +16,7 @@ func init() {
 	carapace.Gen(loginCmd).Standalone()
 
 	common.AddSettingsFlags(loginCmd)
+	common.AddAcceptRisksFlag(loginCmd)
 	common.AddUpFlags(loginCmd)
 
 	loginCmd.Flags().String("nickname", "", "nickname for the current account")

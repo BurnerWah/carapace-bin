@@ -4,7 +4,6 @@ import "github.com/spf13/cobra"
 
 func AddSettingsFlags(cmd *cobra.Command) {
 	cmd.Flags().Bool("accept-dns", true, "accept DNS configuration from the admin panel")
-	// TODO: --accept-risk
 	cmd.Flags().Bool("accept-routes", true, "accept routes advertised by other Tailscale nodes")
 	cmd.Flags().Bool("advertise-connector", false, "advertise this node as an app connector")
 	cmd.Flags().Bool("advertise-exit-node", false, "offer to be an exit node for internet traffic for the tailnet")
