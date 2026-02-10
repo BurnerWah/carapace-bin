@@ -6,7 +6,7 @@ import (
 )
 
 var serve_getConfigCmd = &cobra.Command{
-	Use:   "getConfig",
+	Use:   "get-config",
 	Short: "Get service configuration to save to a file",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }

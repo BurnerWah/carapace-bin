@@ -6,7 +6,7 @@ import (
 )
 
 var configure_macVpnCmd = &cobra.Command{
-	Use:   "macVpn",
+	Use:   "mac-vpn",
 	Short: "Manage the VPN configuration on macOS",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
