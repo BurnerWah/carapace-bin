@@ -6,7 +6,7 @@ import (
 )
 
 var serve_setConfigCmd = &cobra.Command{
-	Use:   "setConfig",
+	Use:   "set-config",
 	Short: "Define service configuration from a file",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
