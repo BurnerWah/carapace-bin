@@ -8,6 +8,7 @@ import (
 var rootCmd = &cobra.Command{
 	Use:   "dnf",
 	Short: "Package management utility for RHEL, Fedora, and CentOS",
+	Long:  "github.com/rpm-software-management/dnf5",
 	Run:   func(cmd *cobra.Command, args []string) {},
 }
 
@@ -76,4 +77,11 @@ func init() {
 	rootCmd.Flag("nogpgcheck").Hidden = true
 	rootCmd.Flag("noplugins").Hidden = true
 	rootCmd.Flag("repoid").Hidden = true
+
+	rootCmd.MarkFlagsMutuallyExclusive("cacheonly", "refresh")
+	rootCmd.MarkFlagsMutuallyExclusive("assumeyes", "assumeno") // dnf allows this but it makes no sense
+	rootCmd.MarkFlagsMutuallyExclusive("best", "no-best")
+	rootCmd.MarkFlagsMutuallyExclusive("enable-plugin", "no-plugins")
+	rootCmd.MarkFlagsMutuallyExclusive("disable-plugin", "no-plugins")
+
 }
