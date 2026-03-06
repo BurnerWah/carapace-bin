@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"github.com/carapace-sh/carapace"
+	"github.com/carapace-sh/carapace-bin/pkg/actions/tools/dnf"
 	"github.com/spf13/cobra"
 )
 
@@ -83,5 +84,13 @@ func init() {
 	rootCmd.MarkFlagsMutuallyExclusive("best", "no-best")
 	rootCmd.MarkFlagsMutuallyExclusive("enable-plugin", "no-plugins")
 	rootCmd.MarkFlagsMutuallyExclusive("disable-plugin", "no-plugins")
+
+	carapace.Gen(rootCmd).FlagCompletion(carapace.ActionMap{
+		"config":           carapace.ActionFiles(),
+		"disable-repo":     dnf.ActionRepos().UniqueList(","),
+		"dump-repo-config": dnf.ActionRepos().UniqueList(","),
+		"enable-repo":      dnf.ActionRepos().UniqueList(","),
+		"repo":             dnf.ActionRepos().UniqueList(","),
+	})
 
 }
