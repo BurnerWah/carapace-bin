@@ -90,6 +90,7 @@ func init() {
 		"disable-repo":     dnf.ActionRepos().UniqueList(","),
 		"dump-repo-config": dnf.ActionRepos().UniqueList(","),
 		"enable-repo":      dnf.ActionRepos().UniqueList(","),
+		"exclude":          dnf.ActionPackages(true).UniqueList(","),
 		"repo":             dnf.ActionRepos().UniqueList(","),
 	})
 
