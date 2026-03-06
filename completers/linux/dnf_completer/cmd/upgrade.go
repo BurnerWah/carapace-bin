@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"github.com/carapace-sh/carapace"
+	"github.com/carapace-sh/carapace-bin/pkg/actions/tools/dnf"
 	"github.com/spf13/cobra"
 )
 
@@ -39,5 +40,8 @@ func init() {
 	upgradeCmd.Flag("advisory").Hidden = true
 	upgradeCmd.Flag("bz").Hidden = true
 	upgradeCmd.Flag("cve").Hidden = true
+
 	rootCmd.AddCommand(upgradeCmd)
+
+	carapace.Gen(upgradeCmd).PositionalAnyCompletion(dnf.ActionPackages(false))
 }

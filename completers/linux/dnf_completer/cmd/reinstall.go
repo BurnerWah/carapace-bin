@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"github.com/carapace-sh/carapace"
+	"github.com/carapace-sh/carapace-bin/pkg/actions/tools/dnf"
 	"github.com/spf13/cobra"
 )
 
@@ -24,5 +25,8 @@ func init() {
 	reinstallCmd.Flags().Bool("skip-broken", false, "Allow resolving of depsolve problems by skipping packages")
 	reinstallCmd.Flags().Bool("skip-unavailable", false, "Allow skipping unavailable packages")
 	reinstallCmd.Flags().String("store", "", "Store the current transaction in a directory instead of running it")
+
 	rootCmd.AddCommand(reinstallCmd)
+
+	carapace.Gen(reinstallCmd).PositionalAnyCompletion(dnf.ActionPackages(false))
 }

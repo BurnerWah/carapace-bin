@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"github.com/carapace-sh/carapace"
+	"github.com/carapace-sh/carapace-bin/pkg/actions/tools/dnf"
 	"github.com/spf13/cobra"
 )
 
@@ -21,5 +22,8 @@ func init() {
 	removeCmd.Flags().Bool("offline", false, "Store the transaction to be performed offline")
 	removeCmd.Flags().String("store", "", "Store the current transaction in a directory instead of running it")
 	removeCmd.Flag("noautoremove").Hidden = true
+
 	rootCmd.AddCommand(removeCmd)
+
+	carapace.Gen(removeCmd).PositionalAnyCompletion(dnf.ActionPackages(false))
 }
